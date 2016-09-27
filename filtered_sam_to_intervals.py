@@ -1039,7 +1039,9 @@ def commatize(s):
 	if (type(s) != str): s = str(s)
 	(prefix,val,suffix) = ("",s,"")
 	if (val.startswith("-")): (prefix,val) = ("-",val[1:])
-	if ("." in val):          (val,suffix) = val.split(".",1)
+	if ("." in val):
+		(val,suffix) = val.split(".",1)
+		suffix = "." + suffix
 
 	try:    int(val)
 	except: return s

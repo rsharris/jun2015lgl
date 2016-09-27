@@ -83,13 +83,18 @@ def int_with_unit(s):
 
 
 # commatize--
-#	Convert an integer to a string, with commas
+#	Convert a numeric string into one with commas.
 
-def commatize(val):
-	if (val >= 0):  sign      =  ""
-	else:          (sign,val) = ("-",-val)
+def commatize(s):
+	if (type(s) != str): s = str(s)
+	(prefix,val,suffix) = ("",s,"")
+	if (val.startswith("-")): (prefix,val) = ("-",val[1:])
+	if ("." in val):
+		(val,suffix) = val.split(".",1)
+		suffix = "." + suffix
 
-	val = str(val)
+	try:    int(val)
+	except: return s
 
 	digits = len(val)
 	if (digits > 3):
@@ -100,7 +105,7 @@ def commatize(val):
 		chunks += [val[ix:ix+3] for ix in xrange(leader,digits,3)]
 		val = ",".join(chunks)
 
-	return sign + val
+	return prefix + val + suffix
 
 
 if __name__ == "__main__": main()

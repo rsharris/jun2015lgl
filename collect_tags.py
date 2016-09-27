@@ -117,4 +117,30 @@ def int_with_unit(s):
 	except ValueError: return int(ceil(float(s) * multiplier))
 
 
+# commatize--
+#	Convert a numeric string into one with commas.
+
+def commatize(s):
+	if (type(s) != str): s = str(s)
+	(prefix,val,suffix) = ("",s,"")
+	if (val.startswith("-")): (prefix,val) = ("-",val[1:])
+	if ("." in val):
+		(val,suffix) = val.split(".",1)
+		suffix = "." + suffix
+
+	try:    int(val)
+	except: return s
+
+	digits = len(val)
+	if (digits > 3):
+		leader = digits % 3
+		chunks = []
+		if (leader != 0):
+			chunks += [val[:leader]]
+		chunks += [val[ix:ix+3] for ix in xrange(leader,digits,3)]
+		val = ",".join(chunks)
+
+	return prefix + val + suffix
+
+
 if __name__ == "__main__": main()

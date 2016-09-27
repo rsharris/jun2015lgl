@@ -1,0 +1,83 @@
+clipThreshold                              = 0.10   # this eliminates short unmapped ends
+
+clipped_breakpoints.windowSize             = 10
+
+clipped_breakpoints_high.threshold         = 96.2   # (percentile)
+clipped_breakpoints_high.tiesAbove         = 1
+clipped_breakpoints_high.samplingStep      = 25
+
+avgInsertLen.S1_LGL_MP                     = 8000   # (see notes, Jun/20/2016)
+stdevInsert.S1_LGL_MP                      = 1000
+minInsertLen.S1_LGL_MP                     = 300
+maxInsertLen.S1_LGL_MP                     = 30000
+avgInsertLen.S2_LGL_MP                     = 8000
+stdevInsert.S2_LGL_MP                      = 1000
+minInsertLen.S2_LGL_MP                     = 300
+maxInsertLen.S2_LGL_MP                     = 30000
+avgInsertLen.S3_LGL_MP                     = 8000
+stdevInsert.S3_LGL_MP                      = 1000
+minInsertLen.S3_LGL_MP                     = 300
+maxInsertLen.S3_LGL_MP                     = 30000
+avgInsertLen.S4_LGL_MP                     = 8000
+stdevInsert.S4_LGL_MP                      = 1000
+minInsertLen.S4_LGL_MP                     = 300
+maxInsertLen.S4_LGL_MP                     = 30000
+avgInsertLen.S5_LGL_MP                     = 8000
+stdevInsert.S5_LGL_MP                      = 1000
+minInsertLen.S5_LGL_MP                     = 300
+maxInsertLen.S5_LGL_MP                     = 30000
+avgInsertLen.S6_LGL_MP                     = 8000
+stdevInsert.S6_LGL_MP                      = 1000
+minInsertLen.S6_LGL_MP                     = 300
+maxInsertLen.S6_LGL_MP                     = 30000
+avgInsertLen.S7_LGL_MP                     = 8000
+stdevInsert.S7_LGL_MP                      = 1000
+minInsertLen.S7_LGL_MP                     = 300
+maxInsertLen.S7_LGL_MP                     = 30000
+avgInsertLen.S8_LGL_MP                     = 8000
+stdevInsert.S8_LGL_MP                      = 1000
+minInsertLen.S8_LGL_MP                     = 300
+maxInsertLen.S8_LGL_MP                     = 30000
+
+insert_depth_dense.minLength               = 1000
+insert_depth_dense.density                 = 90.0   # (percentile)
+insert_depth_dense.densityClip             = 92.0   # (percentile)
+insert_depth_dense.samplingStep            = 25
+
+insert_depth_sparse.maskLevel              = 60.0   # (percentile)
+insert_depth_sparse.windowLength           = 1000
+insert_depth_sparse.minLength              = 500
+insert_depth_sparse.density                = 10.0   # (percentile)
+insert_depth_sparse.samplingStep           = 25
+
+insert_length_sparse.maskLevel             = 60.0   # (percentile)
+insert_length_sparse.windowLength          = 1000
+insert_length_sparse.minLength             = 500
+insert_length_sparse.density               = 5.0    # (percentile)
+insert_length_sparse.densityClip           = 3.0    # (percentile)
+insert_length_sparse.samplingStep          = 25
+
+broken_mates_dense.minLength.S1_LGL_MP     = 8000
+broken_mates_dense.minLength.S2_LGL_MP     = 8000
+broken_mates_dense.minLength.S3_LGL_MP     = 8000
+broken_mates_dense.minLength.S4_LGL_MP     = 8000
+broken_mates_dense.minLength.S5_LGL_MP     = 8000
+broken_mates_dense.minLength.S6_LGL_MP     = 8000
+broken_mates_dense.minLength.S7_LGL_MP     = 8000
+broken_mates_dense.minLength.S8_LGL_MP     = 8000
+broken_mates_dense.density                 = 95.0   # (percentile)
+broken_mates_dense.samplingStep            = 25
+
+discordant_mates_dense.minLength.S1_LGL_MP = 8000
+discordant_mates_dense.minLength.S2_LGL_MP = 8000
+discordant_mates_dense.minLength.S3_LGL_MP = 8000
+discordant_mates_dense.minLength.S4_LGL_MP = 8000
+discordant_mates_dense.minLength.S5_LGL_MP = 8000
+discordant_mates_dense.minLength.S6_LGL_MP = 8000
+discordant_mates_dense.minLength.S7_LGL_MP = 8000
+discordant_mates_dense.minLength.S8_LGL_MP = 8000
+discordant_mates_dense.density             = 95.0   # (percentile)
+discordant_mates_dense.samplingStep        = 25
+
+call_insertions.closure                    = 2K
+call_insertions.proximity                  = 2K
